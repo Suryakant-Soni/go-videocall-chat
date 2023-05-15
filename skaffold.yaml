@@ -1,0 +1,13 @@
+apiVersion: skaffold/v4beta5
+kind: Config
+metadata:
+  name: go-videocall-chat
+build:
+  artifacts:
+    - image: videochat
+      context: containers/images
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
+    - views/skaffold.yaml

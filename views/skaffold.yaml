@@ -1,0 +1,10 @@
+apiVersion: skaffold/v2betaX
+kind: Config
+metadata:
+  name: videochat
+build:
+  artifacts:
+    - image: videochat
+      context: containers/images
+      docker:
+        Dockerfile: Dockerfile
